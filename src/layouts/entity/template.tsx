@@ -15,15 +15,15 @@ import Breadcrumbs from "src/components/common/Breadcrumbs";
 import Banner from "src/components/entity/Banner";
 import Core from "src/components/entity/Core";
 import Events from "src/components/entity/Events";
-import FAQs from "src/components/entity/FAQs";
+// import FAQs from "src/components/entity/FAQs";
 // import Gallery from "src/components/entity/Gallery";
 import Hero from "src/components/entity/Hero";
-import Insights from "src/components/entity/Insights";
+// import Insights from "src/components/entity/Insights";
 import Nearby from "src/components/entity/Nearby";
-import Products from "src/components/entity/Products";
+// import Products from "src/components/entity/Products";
 // import Promo from "src/components/entity/Promo";
-import Reviews from "src/components/entity/Reviews";
-import Team from "src/components/entity/Team";
+// import Reviews from "src/components/entity/Reviews";
+// import Team from "src/components/entity/Team";
 
 import type { Template } from "@yext/pages";
 import { Main } from "src/layouts/main";
@@ -42,19 +42,12 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     description,
     hours,
     photoGallery,
-    c_featuredProductsSection: products,
-    c_teamSection: team,
-    c_faqSection: faq,
     c_nearbySection: nearby,
     c_eventsSection: events,
     dm_directoryParents_defaultdirectory: directoryParents,
   } = data.document;
 
-  const showProducts = products?.title && products?.products;
-  const showTeam = team?.title && team?.team;
-  const showFAQ = faq?.title && faq?.faqs;
   const showEvents = events?.title && events.events;
-  const showInsights = insights?.title && insights?.insights;
 
   return (
     <>
@@ -75,40 +68,11 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
       <ErrorBoundaryWithAnalytics name="core">
         <Core profile={data.document} />
       </ErrorBoundaryWithAnalytics>
-      {showProducts && (
-        <ErrorBoundaryWithAnalytics name="products">
-          <Products title={products.title} items={products.products} />
-        </ErrorBoundaryWithAnalytics>
-      )}
       {showEvents && (
         <ErrorBoundaryWithAnalytics name="events">
           <Events title={events.title} items={events.events} />
         </ErrorBoundaryWithAnalytics>
       )}
-      {showInsights && (
-        <ErrorBoundaryWithAnalytics name="insights">
-          <Insights
-            title={insights.title}
-            cta={insights.cta}
-            insights={insights.insights}
-          />
-        </ErrorBoundaryWithAnalytics>
-      )}
-      {showTeam && (
-        <ErrorBoundaryWithAnalytics name="team">
-          <Team title={team.title} team={team.team} initialSize={3} />
-        </ErrorBoundaryWithAnalytics>
-      )}
-      {showFAQ && (
-        <ErrorBoundaryWithAnalytics name="faqs">
-          <FAQs title={faq.title} faqs={faq.faqs} />
-        </ErrorBoundaryWithAnalytics>
-      )}
-      <LazyLoadWrapper>
-        <ErrorBoundaryWithAnalytics name="reviews">
-          <Reviews title={reviews?.title} name={name} entityId={id} />
-        </ErrorBoundaryWithAnalytics>
-      </LazyLoadWrapper>
       <LazyLoadWrapper>
         <ErrorBoundaryWithAnalytics name="nearby">
           <Nearby
