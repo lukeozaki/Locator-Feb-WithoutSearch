@@ -160,11 +160,6 @@ export interface LocationProfile extends BaseProfile {
     readonly linkToLocator?: boolean;
     readonly cta?: CTA;
   };
-  readonly c_insightsSection?: {
-    readonly title?: string;
-    readonly cta?: CTA;
-    readonly insights?: Insight[];
-  };
   readonly c_reviewsSection?: {
     readonly title?: string;
     readonly reviews?: ReviewProfile[];
