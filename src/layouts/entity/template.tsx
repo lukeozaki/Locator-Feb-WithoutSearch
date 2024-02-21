@@ -12,7 +12,6 @@ import { LazyLoadWrapper } from "src/components/common/LazyLoadWrapper";
 import type { LocationProfile, TemplateRenderProps } from "src/types/entities";
 
 import Breadcrumbs from "src/components/common/Breadcrumbs";
-import About from "src/components/entity/About";
 import Banner from "src/components/entity/Banner";
 import Core from "src/components/entity/Core";
 import Events from "src/components/entity/Events";
@@ -43,12 +42,8 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     description,
     hours,
     photoGallery,
-    c_bannerSection: banner,
-    c_heroSection: hero,
     c_promoSection: promo,
     c_featuredProductsSection: products,
-    c_aboutSection: about,
-    c_gallerySection: gallery,
     c_teamSection: team,
     c_faqSection: faq,
     c_nearbySection: nearby,
@@ -58,10 +53,8 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     dm_directoryParents_defaultdirectory: directoryParents,
   } = data.document;
 
-  const showBanner = banner?.text && banner?.image;
   const showPromo = promo?.title && promo?.image;
   const showProducts = products?.title && products?.products;
-  const showAbout = about?.title && (about.description || description);
   const showGallery = gallery?.images || photoGallery;
   const showTeam = team?.title && team?.team;
   const showFAQ = faq?.title && faq?.faqs;
@@ -70,11 +63,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
 
   return (
     <>
-      {showBanner && (
-        <ErrorBoundaryWithAnalytics name="banner">
-          <Banner text={banner.text} image={banner.image} />
-        </ErrorBoundaryWithAnalytics>
-      )}
       <ErrorBoundaryWithAnalytics name="breadcrumbs">
         <Breadcrumbs
           breadcrumbs={directoryParents || []}
@@ -85,13 +73,8 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
       <ErrorBoundaryWithAnalytics name="hero">
         <Hero
           name={name}
-          cta1={hero?.cta1}
-          cta2={hero?.cta2}
           address={address}
-          background={hero?.background}
           hours={hours}
-          numReviews={21}
-          rating={4.5}
         />
       </ErrorBoundaryWithAnalytics>
       <ErrorBoundaryWithAnalytics name="core">
@@ -119,30 +102,12 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
           <Events title={events.title} items={events.events} />
         </ErrorBoundaryWithAnalytics>
       )}
-      {showAbout && (
-        <ErrorBoundaryWithAnalytics name="about">
-          <About
-            title={about.title}
-            image={about.image}
-            description={about.description || description}
-            cta={about.cta}
-          />
-        </ErrorBoundaryWithAnalytics>
-      )}
       {showInsights && (
         <ErrorBoundaryWithAnalytics name="insights">
           <Insights
             title={insights.title}
             cta={insights.cta}
             insights={insights.insights}
-          />
-        </ErrorBoundaryWithAnalytics>
-      )}
-      {showGallery && (
-        <ErrorBoundaryWithAnalytics name="gallery">
-          <Gallery
-            title={gallery?.title}
-            images={gallery?.images || photoGallery}
           />
         </ErrorBoundaryWithAnalytics>
       )}

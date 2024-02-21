@@ -36,10 +36,10 @@ export const configBuilder: (
       "dm_baseEntityCount",
       "slug",
       // About Fields
-      "c_aboutSection",
+      // "c_aboutSection",
       "description",
       // Banner Fields
-      "c_bannerSection",
+      // "c_bannerSection",
       // Core Fields
       "address",
       "mainPhone",
@@ -61,10 +61,10 @@ export const configBuilder: (
       // "c_faqSection.faqs.question",
       // "c_faqSection.faqs.answerV2",
       // Gallery Fields
-      "c_gallerySection",
+      // "c_gallerySection",
       "photoGallery",
       // Hero Fields
-      "c_heroSection",
+      // "c_heroSection",
       "name",
       "address",
       "hours",

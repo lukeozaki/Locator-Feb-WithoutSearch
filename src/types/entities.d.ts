@@ -135,15 +135,6 @@ export interface LocationProfile extends BaseProfile {
     readonly title?: string;
     readonly events?: EventProfile[];
   };
-  readonly c_bannerSection?: {
-    readonly text?: string;
-    readonly image?: Image;
-  };
-  readonly c_heroSection?: {
-    readonly background?: Image;
-    readonly cta1?: CTA;
-    readonly cta2?: CTA;
-  };
   readonly c_featuredProductsSection?: {
     readonly title?: string;
     readonly products?: ProductProfile[];
@@ -155,16 +146,6 @@ export interface LocationProfile extends BaseProfile {
     readonly cta?: CTA;
     readonly googlePlayUrl?: string;
     readonly appStoreUrl?: string;
-  };
-  readonly c_gallerySection?: {
-    readonly title?: string;
-    readonly images?: Image[];
-  };
-  readonly c_aboutSection?: {
-    readonly title?: string;
-    readonly description?: string;
-    readonly image?: Image;
-    readonly cta?: CTA;
   };
   readonly c_teamSection?: {
     readonly title?: string;
