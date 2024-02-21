@@ -186,7 +186,7 @@
       "slug": "webhook-test"
     }
   ],
-  "dm_directoryParents": [
+  "dm_directoryParents_defaultdirectory": [
     {
       "name": "All Locations",
       "slug": "index.html"

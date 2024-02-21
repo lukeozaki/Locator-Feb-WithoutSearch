@@ -307,7 +307,7 @@
       "slug": "ny/new-york/601699-e-6th-st"
     }
   ],
-  "dm_directoryParents": [
+  "dm_directoryParents_defaultdirectory": [
     {
       "name": "All Locations",
       "slug": "index.html"

@@ -104,7 +104,7 @@
   },
   "businessId": 3861963,
   "description": "New Description 2",
-  "dm_directoryParents": [
+  "dm_directoryParents_defaultdirectory": [
     {
       "name": "All Locations",
       "slug": "index.html"

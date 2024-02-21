@@ -103,7 +103,7 @@
     "region": "NY"
   },
   "businessId": 3861963,
-  "dm_directoryParents": [
+  "dm_directoryParents_defaultdirectory": [
     {
       "name": "All Locations",
       "slug": "index.html"

@@ -276,7 +276,7 @@
     "title": "Meet Our Team"
   },
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus placerat justo a viverra. Quisque ut congue tellus, vitae fermentum velit. Suspendisse sed gravida libero. Etiam pulvinar tincidunt augue vitae fermentum. Maecenas tortor nunc, ullamcorper eu tortor sed, vestibulum suscipit libero. \\nPraesent sit amet pulvinar massa. Proin mattis tellus tristique neque ullamcorper, vel vestibulum lorem dapibus. Vivamus et magna in justo posuere imperdiet sit amet amour tellus.",
-  "dm_directoryParents": [
+  "dm_directoryParents_defaultdirectory": [
     {
       "name": "All Locations",
       "slug": "index.html"
