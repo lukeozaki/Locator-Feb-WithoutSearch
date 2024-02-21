@@ -21,7 +21,7 @@ import Hero from "src/components/entity/Hero";
 import Insights from "src/components/entity/Insights";
 import Nearby from "src/components/entity/Nearby";
 import Products from "src/components/entity/Products";
-import Promo from "src/components/entity/Promo";
+// import Promo from "src/components/entity/Promo";
 import Reviews from "src/components/entity/Reviews";
 import Team from "src/components/entity/Team";
 
@@ -50,7 +50,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     dm_directoryParents_defaultdirectory: directoryParents,
   } = data.document;
 
-  const showPromo = promo?.title && promo?.image;
   const showProducts = products?.title && products?.products;
   const showGallery = gallery?.images || photoGallery;
   const showTeam = team?.title && team?.team;
@@ -77,18 +76,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
       <ErrorBoundaryWithAnalytics name="core">
         <Core profile={data.document} />
       </ErrorBoundaryWithAnalytics>
-      {showPromo && (
-        <ErrorBoundaryWithAnalytics name="promo">
-          <Promo
-            title={promo.title}
-            description={promo.description}
-            image={promo.image}
-            cta={promo.cta}
-            googlePlayUrl={promo.googlePlayUrl}
-            appStoreUrl={promo.appStoreUrl}
-          />
-        </ErrorBoundaryWithAnalytics>
-      )}
       {showProducts && (
         <ErrorBoundaryWithAnalytics name="products">
           <Products title={products.title} items={products.products} />
