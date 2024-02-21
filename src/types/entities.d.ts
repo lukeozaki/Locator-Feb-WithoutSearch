@@ -139,14 +139,6 @@ export interface LocationProfile extends BaseProfile {
     readonly title?: string;
     readonly products?: ProductProfile[];
   };
-  readonly c_promoSection?: {
-    readonly title?: string;
-    readonly description?: string;
-    readonly image?: Image;
-    readonly cta?: CTA;
-    readonly googlePlayUrl?: string;
-    readonly appStoreUrl?: string;
-  };
   readonly c_teamSection?: {
     readonly title?: string;
     readonly team?: FinancialProfessionalProfile[];

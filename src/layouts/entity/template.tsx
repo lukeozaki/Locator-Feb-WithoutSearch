@@ -42,7 +42,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     description,
     hours,
     photoGallery,
-    c_promoSection: promo,
     c_featuredProductsSection: products,
     c_teamSection: team,
     c_faqSection: faq,

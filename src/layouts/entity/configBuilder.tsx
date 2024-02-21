@@ -87,9 +87,9 @@ export const configBuilder: (
       // "c_featuredProductsSection.products.primaryPhoto",
       // "c_featuredProductsSection.products.c_primaryCTA",
       // Promo Fields
-      "c_promoSection",
+      // "c_promoSection",
       // Review Fields
-      "c_reviewsSection",
+      // "c_reviewsSection",
       // Team Fields
       // "c_teamSection.title",
       // "c_teamSection.team.id",
