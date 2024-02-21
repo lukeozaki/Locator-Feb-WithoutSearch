@@ -16,7 +16,7 @@ import Banner from "src/components/entity/Banner";
 import Core from "src/components/entity/Core";
 import Events from "src/components/entity/Events";
 import FAQs from "src/components/entity/FAQs";
-import Gallery from "src/components/entity/Gallery";
+// import Gallery from "src/components/entity/Gallery";
 import Hero from "src/components/entity/Hero";
 import Insights from "src/components/entity/Insights";
 import Nearby from "src/components/entity/Nearby";
@@ -51,7 +51,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
   } = data.document;
 
   const showProducts = products?.title && products?.products;
-  const showGallery = gallery?.images || photoGallery;
   const showTeam = team?.title && team?.team;
   const showFAQ = faq?.title && faq?.faqs;
   const showEvents = events?.title && events.events;
