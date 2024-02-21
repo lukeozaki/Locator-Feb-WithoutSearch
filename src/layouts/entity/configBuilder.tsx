@@ -102,11 +102,11 @@ export const configBuilder: (
     ]),
     // Defines the scope of entities that qualify for this stream.
     filter: filter || {
-      entityTypes: ["location"],
+      entityTypes: ["restaurant"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en"],
+      locales: ["ja"],
     },
   },
 });

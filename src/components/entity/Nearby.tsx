@@ -15,7 +15,7 @@ const getConfig = (api_key: string) => {
     endpoint: "https://liveapi.yext.com/v2/accounts/me/entities/geosearch",
     params: {
       api_key,
-      entityTypes: "location",
+      entityTypes: "restaurant",
       limit: "4",
       radius: "50",
       savedFilterIds: "<REPLACE-ME>",
