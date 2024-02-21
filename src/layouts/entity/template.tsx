@@ -47,7 +47,6 @@ const EntityLayout = ({ data }: EntityLayoutProps) => {
     c_faqSection: faq,
     c_nearbySection: nearby,
     c_eventsSection: events,
-    c_reviewsSection: reviews,
     dm_directoryParents_defaultdirectory: directoryParents,
   } = data.document;
 

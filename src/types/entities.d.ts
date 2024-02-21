@@ -152,10 +152,6 @@ export interface LocationProfile extends BaseProfile {
     readonly linkToLocator?: boolean;
     readonly cta?: CTA;
   };
-  readonly c_reviewsSection?: {
-    readonly title?: string;
-    readonly reviews?: ReviewProfile[];
-  };
   readonly dm_directoryParents_defaultdirectory?: Array<{ slug: string; name: string }>;
 }
 
