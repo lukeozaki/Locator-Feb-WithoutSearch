@@ -22,11 +22,6 @@ function formatPhone(
     try {
       const phone = parsePhoneNumberWithError(s, countryCode as CountryCode);
 
-      if (countryCode === "US") {
-        return phone.formatNational(); // (123) 555-6789
-      } else {
-        return phone.formatInternational(); // +1 123 555 6789
-      }
     } catch (error) {
       if (error instanceof ParseError) {
         // Not a phone number, non-existent country, etc.
