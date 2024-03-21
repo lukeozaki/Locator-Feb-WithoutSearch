@@ -21,7 +21,7 @@ function formatPhone(
   if (s) {
     try {
       const phone = parsePhoneNumberWithError(s, countryCode as CountryCode);
-      return phone.formatNational();
+      s = phone.formatNational();
     } catch (error) {
       if (error instanceof ParseError) {
         // Not a phone number, non-existent country, etc.
